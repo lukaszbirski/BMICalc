@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BMICalc.ResultPage">
+
+    <StackLayout VerticalOptions="CenterAndExpand">
+        
+        <Label x:Name="resultLabel" 
+                   Text="Welcome to Xamarin.Forms!"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="CenterAndExpand"/>
+        <Label x:Name="descriptionLabel" 
+                   Text="Welcome to Xamarin.Forms!" 
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"/>
+    </StackLayout>
+    
+</ContentPage>
