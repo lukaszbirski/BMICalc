@@ -18,8 +18,8 @@ namespace BMICalc
             InitializeComponent();
             Bmi bmi = new Bmi(kg, cm);
             string calcResult = bmi.Result.ToString();
-            resultLabel.Text = $"Wskaźnik BMI wynosi: {calcResult}";
-            descriptionLabel.Text = $"i oznacza {bmi.getDescription()}.";
+            resultLabel.Text = $"The BMI index is: {calcResult}";
+            descriptionLabel.Text = $"and indicates {bmi.getDescription()}.";
         }
     }
 }

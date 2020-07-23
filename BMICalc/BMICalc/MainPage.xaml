@@ -1,39 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:BMICalc"
              mc:Ignorable="d"
              x:Class="BMICalc.MainPage">
 
-    <StackLayout  
-            VerticalOptions="Center"
-            Margin="25.0">
-        <!-- Place new controls here -->
-        
-        <Label Text="Oblicz swój wskaźnik BMI"
-               FontAttributes="Bold"
-               FontSize="Large"
-               VerticalOptions="Center" 
-               HorizontalOptions="CenterAndExpand"
-               Margin="0,0,0,30"/>
-     
-        <Label Text="Waga:"/>
-        <Entry x:Name="kgEntry"
-               Keyboard="Numeric"
-               Placeholder="Podaj wagę w kilogramach"/>
+    <local:MetricUnitsPage Title="{StaticResource metricUnitsString}"/>
+    <local:UsUnitsPage Title="{StaticResource usUnitsString}"/>
 
-        <Label Text="Wzrost:"/>
-        <Entry x:Name="cmEntry"
-               Keyboard="Numeric"
-               Placeholder="Podaj wzrost w centymetrach"/>
-
-        <Button x:Name ="ObliczButton"
-                Style="{StaticResource normalButton}"
-                Text="Oblicz"
-                Clicked="ObliczButton_Clicked"
-                Margin="0,15,0,0"/>
-
-    </StackLayout>
-
-</ContentPage>
+</TabbedPage>

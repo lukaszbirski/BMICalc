@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BMICalc.UsUnitsPage">
+    <ContentPage.Content>
+
+        <StackLayout  
+            VerticalOptions="Center"
+            Margin="25.0">
+
+            <Label Text="{StaticResource calculateBMIString}"
+               FontAttributes="Bold"
+               FontSize="Large"
+               VerticalOptions="Center" 
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,0,0,30"/>
+
+            <Label Text="{StaticResource weightString}"/>
+
+            <Entry x:Name="poundsEntry"
+               Keyboard="Numeric"
+               Placeholder="{StaticResource poundsHint}"/>
+
+            <Label Text="{StaticResource heightString}"/>
+            
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand">
+
+                <Entry x:Name="feetsEntry"
+                        Keyboard="Numeric"
+                        Placeholder="{StaticResource feetsHint}"
+                        WidthRequest="170"/>
+
+                <Entry x:Name="inchesEntry"
+                        Keyboard="Numeric"
+                        Placeholder="{StaticResource inchesHint}"
+                        WidthRequest="170"/>
+
+            </StackLayout>
+
+
+            <Button x:Name ="CalculateButton"
+                Style="{StaticResource normalButton}"
+                Text="{StaticResource calculateString}"
+                Clicked="CalculateButton_Clicked"
+                Margin="0,15,0,0"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

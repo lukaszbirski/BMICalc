@@ -13,5 +13,19 @@
             <Setter Property="BackgroundColor" Value="{StaticResource blueColor}"/>
             <Setter Property="TextColor" Value="White"/>
         </Style>
+
+        <x:String x:Key="calculateBMIString">Calculate Your BMI</x:String>
+        <x:String x:Key="weightString">Weight:</x:String>
+        <x:String x:Key="heightString">Height:</x:String>
+        <x:String x:Key="calculateString">Calculate</x:String>
+        <x:String x:Key="kilogramsHint">kilograms</x:String>
+        <x:String x:Key="centimetersHint">centimeters</x:String>
+        <x:String x:Key="poundsHint">pounds</x:String>
+        <x:String x:Key="feetsHint">feets</x:String>
+        <x:String x:Key="inchesHint">inches</x:String>
+        <x:String x:Key="metricUnitsString">Metric Units</x:String>
+        <x:String x:Key="usUnitsString">US Units</x:String>
+
+        <x:String x:Key="toastAlertString">Please, provide all required informations!</x:String>
     </Application.Resources>
 </Application>

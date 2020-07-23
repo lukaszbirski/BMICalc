@@ -9,13 +9,13 @@
     <StackLayout VerticalOptions="CenterAndExpand">
         
         <Label x:Name="resultLabel" 
-                   Text="Welcome to Xamarin.Forms!"
+                   d:Text="Wskaźnik BMI wynosi: XXX"
                    FontAttributes="Bold"
                    FontSize="Large"
                    VerticalOptions="Center" 
                    HorizontalOptions="CenterAndExpand"/>
         <Label x:Name="descriptionLabel" 
-                   Text="Welcome to Xamarin.Forms!" 
+                   d:Text="i oznacza xxxxxx" 
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="Center"/>
     </StackLayout>
