@@ -6,6 +6,17 @@
              mc:Ignorable="d"
              x:Class="BMICalc.MainPage">
 
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="{StaticResource changeUnitsString}"
+                     x:Name="changeUnitsToolbarItem"
+                     Order="Secondary"
+                     Priority="0"
+                     Clicked="changeUnitsToolbarItem_Clicked"/>
+        <ToolbarItem Text="{StaticResource aboutString}"
+                     Order="Secondary"
+                     Priority="0" />
+    </TabbedPage.ToolbarItems>
+    
     <local:MetricUnitsPage Title="{StaticResource metricUnitsString}"/>
     <local:UsUnitsPage Title="{StaticResource usUnitsString}"/>
 

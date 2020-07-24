@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using BMICalc.models;
+using Plugin.Toast;
 
 namespace BMICalc
 {
@@ -15,6 +16,12 @@ namespace BMICalc
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void changeUnitsToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            string alert = "Popup menu will appear now";
+            CrossToastPopUp.Current.ShowToastError(alert, Plugin.Toast.Abstractions.ToastLength.Short);
         }
     }
 }
