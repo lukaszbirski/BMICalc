@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="BMICalc.MainPage">
 
-    <TabbedPage.ToolbarItems>
+    <TabbedPage.ToolbarItems >
         <ToolbarItem Text="{StaticResource changeUnitsString}"
                      x:Name="changeUnitsToolbarItem"
                      Order="Secondary"

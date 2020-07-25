@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using BMICalc.models;
 using Plugin.Toast;
+using Rg.Plugins.Popup.Services;
 
 namespace BMICalc
 {
@@ -20,8 +21,9 @@ namespace BMICalc
 
         private void changeUnitsToolbarItem_Clicked(object sender, EventArgs e)
         {
-            string alert = "Popup menu will appear now";
-            CrossToastPopUp.Current.ShowToastError(alert, Plugin.Toast.Abstractions.ToastLength.Short);
+            /*string alert = "Popup menu will appear now";
+            CrossToastPopUp.Current.ShowToastError(alert, Plugin.Toast.Abstractions.ToastLength.Short);*/
+            PopupNavigation.Instance.PushAsync(new PopupPage());
         }
     }
 }
