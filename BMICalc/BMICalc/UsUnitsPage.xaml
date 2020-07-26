@@ -43,7 +43,6 @@
 
 
             <Button x:Name ="CalculateButton"
-                Style="{StaticResource normalButton}"
                 Text="{StaticResource calculateString}"
                 Clicked="CalculateButton_Clicked"
                 Margin="0,15,0,0"/>

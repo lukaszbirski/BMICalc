@@ -22,18 +22,50 @@
                  BackgroundColor="White"
                  HorizontalOptions="Center"
                  VerticalOptions="Center">
-        
-        <Label Text="Choose your units system:"
+
+        <Label Text="{StaticResource chooseUnitsString}"
                FontSize="Large"
                FontAttributes="Bold" />
-        
-        <CheckBox />
-        <CheckBox />
 
-        <Button BackgroundColor="DodgerBlue"
-                Text="Save"
-                TextColor="White" />
-        
+        <Grid Margin="20,5,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.15*" />
+                <ColumnDefinition Width="0.45*" />
+                <ColumnDefinition Width="0.35*" />
+                <ColumnDefinition Width="0.20*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <CheckBox Color="{StaticResource blueColor}"
+                      x:Name="metricUnitsCheckbox"
+                      CheckedChanged="metricUnitsCheckbox_CheckedChanged"
+                      VerticalOptions="Center" />
+            <Label Grid.Column="1"
+                   Text="{StaticResource metricUnitsString}"
+                   VerticalOptions="Center"
+                   FontSize="18"/>
+
+            <CheckBox Grid.Row="1"
+                      VerticalOptions="Center" 
+                      Color="{StaticResource blueColor}"
+                      x:Name="usUnitsCheckbox"
+                      CheckedChanged="usUnitsCheckbox_CheckedChanged"/>
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{StaticResource usUnitsString}"
+                   VerticalOptions="Center"
+                   FontSize="18"/>
+        </Grid> 
+
+        <Button Text="{StaticResource saveString}"
+                x:Name="saveButton"
+                Clicked="saveButton_Clicked"/>
+
+
+
     </StackLayout>
 
 </pages:PopupPage>
