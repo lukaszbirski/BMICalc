@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace BMICalc
 {
@@ -16,6 +17,7 @@ namespace BMICalc
         public PopupPage()
         {
             InitializeComponent();
+            setCheckBoxsFromPreferences();
         }
 
         private void metricUnitsCheckbox_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -32,15 +34,33 @@ namespace BMICalc
         {
             if(metricUnitsCheckbox.IsChecked || usUnitsCheckbox.IsChecked)
             {
-                string alert = returnCheckedCheckBox();
-                CrossToastPopUp.Current.ShowToastError(alert, Plugin.Toast.Abstractions.ToastLength.Short);
+                string choosenSystem = returnCheckedCheckBox();
+                Preferences.Set((string)App.Current.Resources["systemKeyString"], choosenSystem);
             }
         }
 
         private string returnCheckedCheckBox()
         {
-            if (usUnitsCheckbox.IsChecked) return "US_UNITS";
-            else return "METRIC_UNITS";
+            if (usUnitsCheckbox.IsChecked) return (string)App.Current.Resources["usUnitsString"];
+            else return (string)App.Current.Resources["metricUnitsString"];
+        }
+
+        private void setCheckBoxsFromPreferences()
+        {
+            if (Preferences.ContainsKey((string)App.Current.Resources["systemKeyString"]))
+            {
+                var systemFromPreferences = Preferences.Get((string)App.Current.Resources["systemKeyString"], (string)App.Current.Resources["errorString"]);
+                if (systemFromPreferences.Equals((string)App.Current.Resources["metricUnitsString"]))
+                {
+                    metricUnitsCheckbox.IsChecked = true;
+                    usUnitsCheckbox.IsChecked = false;
+                }
+                else if (systemFromPreferences.Equals((string)App.Current.Resources["usUnitsString"]))
+                {
+                    metricUnitsCheckbox.IsChecked = false;
+                    usUnitsCheckbox.IsChecked = true;
+                }
+            }
         }
     }
 }

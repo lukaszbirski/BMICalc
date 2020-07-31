@@ -25,6 +25,8 @@
         <x:String x:Key="inchesHint">inches</x:String>
         <x:String x:Key="metricUnitsString">Metric Units</x:String>
         <x:String x:Key="usUnitsString">US Units</x:String>
+        <x:String x:Key="errorString">Error occured</x:String>
+        <x:String x:Key="systemKeyString">system_key</x:String>
         <x:String x:Key="changeUnitsString">Change units</x:String>
         <x:String x:Key="aboutString">About</x:String>
         <x:String x:Key="chooseUnitsString">Choose your units system:</x:String>
