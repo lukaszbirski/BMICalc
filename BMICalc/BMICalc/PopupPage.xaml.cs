@@ -36,6 +36,7 @@ namespace BMICalc
             {
                 string choosenSystem = returnCheckedCheckBox();
                 Preferences.Set((string)App.Current.Resources["systemKeyString"], choosenSystem);
+                Navigation.PushAsync(new MainPage());
             }
         }
 

@@ -16,8 +16,8 @@
                      Order="Secondary"
                      Priority="0" />
     </TabbedPage.ToolbarItems>
-    
+    <!--
     <local:MetricUnitsPage Title="{StaticResource metricUnitsString}"/>
-    <local:UsUnitsPage Title="{StaticResource usUnitsString}"/>
+    <local:UsUnitsPage Title="{StaticResource usUnitsString}"/>-->
 
 </TabbedPage>
