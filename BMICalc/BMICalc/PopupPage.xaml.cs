@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Rg.Plugins.Popup.Services;
 
 namespace BMICalc
 {
@@ -37,6 +38,7 @@ namespace BMICalc
                 string choosenSystem = returnCheckedCheckBox();
                 Preferences.Set((string)App.Current.Resources["systemKeyString"], choosenSystem);
                 Navigation.PushAsync(new MainPage());
+                PopupNavigation.Instance.PopAsync(true);
             }
         }
 
