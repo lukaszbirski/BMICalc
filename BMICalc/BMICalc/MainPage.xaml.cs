@@ -15,6 +15,7 @@ namespace BMICalc
     [DesignTimeVisible(false)]
     public partial class MainPage : TabbedPage
     {
+
         public MainPage()
         {
             InitializeComponent();
@@ -23,13 +24,12 @@ namespace BMICalc
 
         private void changeUnitsToolbarItem_Clicked(object sender, EventArgs e)
         {
-            /*string alert = "Popup menu will appear now";
-            CrossToastPopUp.Current.ShowToastError(alert, Plugin.Toast.Abstractions.ToastLength.Short);*/
             PopupNavigation.Instance.PushAsync(new PopupPage());
         }
 
         private void getMainPageFromPreferences()
         {
+            //Preferences.Clear();
             if (Preferences.ContainsKey((string)App.Current.Resources["systemKeyString"]))
             {
                 var systemFromPreferences = Preferences.Get((string)App.Current.Resources["systemKeyString"], (string)App.Current.Resources["errorString"]);
@@ -46,7 +46,11 @@ namespace BMICalc
                     Children.Add(usUnitsPage);
                 }
             }
-            else PopupNavigation.Instance.PushAsync(new PopupPage());
+            else
+            {
+                Children.Add(new PopupPage());
+                PopupNavigation.Instance.PushAsync(new PopupPage());
+            }
         }
     }
 }
